@@ -13,7 +13,7 @@ struct ContentView: View {
             .resizable()
             .scaledToFit()
     }
-    //Test
+    //Prueba
 }
 
 #Preview {
