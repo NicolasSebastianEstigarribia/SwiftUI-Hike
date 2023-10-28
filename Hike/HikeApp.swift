@@ -2,7 +2,7 @@
 //  HikeApp.swift
 //  Hike
 //
-//  Created by digital express on 20/10/2023.
+//  Created by Nicolas Estigarribia on 20/10/2023.
 //
 
 import SwiftUI

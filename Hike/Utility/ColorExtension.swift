@@ -2,7 +2,16 @@
 //  ColorExtension.swift
 //  Hike
 //
-//  Created by digital express on 28/10/2023.
+//  Created by Nicolas Estigarribia on 28/10/2023.
 //
 
 import Foundation
+import SwiftUI
+
+extension Color {
+    
+    static let customGreenLight = Color(UIColor.colorGreenLight)
+    static let customGreenMedium = Color(UIColor.colorGrayMedium)
+    static let customGreenDark = Color(UIColor.colorGreenDark)
+    
+}
