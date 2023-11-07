@@ -17,20 +17,33 @@ struct CardView: View {
                 
                 VStack (alignment: .leading) {
                     //Title
-                    Text("Hiking")
-                        .fontWeight(.black)
-                        .font(.system(size: 52))
-                        .foregroundStyle(
-                            LinearGradient(
-                                colors:
-                                    [
-                                     .customGrayLight,
-                                     .customGrayMedium
-                                    ],
-                                    startPoint: .top,
-                                    endPoint: .bottom
-                            )
-                    )
+                    HStack {
+                        //Title text
+                        
+                        Text("Hiking")
+                            .fontWeight(.black)
+                            .font(.system(size: 52))
+                            .foregroundStyle(
+                                LinearGradient(
+                                    colors:
+                                        [
+                                         .customGrayLight,
+                                         .customGrayMedium
+                                        ],
+                                        startPoint: .top,
+                                        endPoint: .bottom
+                                )
+                        )
+                        
+                        //Title Button
+                        Button {
+                            //Action: show a sheet.
+                            print("The button was pressed.")
+                        } label: {
+                            Text("button")
+                        }
+                        
+                    }
                     //Subtitle
                     Text("Fun and enjoyable outdoor activity for friends and families.")
                         .multilineTextAlignment(.leading)
