@@ -14,4 +14,7 @@ extension Color {
     static let customGreenMedium = Color(UIColor.colorGrayMedium)
     static let customGreenDark = Color(UIColor.colorGreenDark)
     
+    static let customGrayLight = Color(UIColor.colorGrayLight)
+    static let customGrayMedium = Color(UIColor.colorGrayMedium)
+    
 }
