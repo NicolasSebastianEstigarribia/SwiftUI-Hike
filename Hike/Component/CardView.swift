@@ -2,7 +2,7 @@
 //  CardView.swift
 //  Hike
 //
-//  Created by digital express on 28/10/2023.
+//  Created by Nicolas Estigarribia on 28/10/2023.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct CardView: View {
             CustomBackgroundView()
             
             VStack {
-                //Header]
+                //Header
                 
                 VStack (alignment: .leading) {
                     //Title
@@ -77,6 +77,18 @@ struct CardView: View {
                 }
                 
                 // Footer
+                
+                
+                Button {
+                    //Ramdom image
+                } label: {
+                    Text("Explore More")
+                        .font(.title2)
+                        .fontWeight(.heavy)
+                        .foregroundStyle(.colorGreenLight)
+                }
+                .buttonStyle(GradientButtonStyle())
+                
             }
         }.frame(width: 320 , height: 570)
     }

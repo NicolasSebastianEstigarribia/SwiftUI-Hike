@@ -2,7 +2,7 @@
 //  CustomButtonView.swift
 //  Hike
 //
-//  Created by digital express on 07/11/2023.
+//  Created by Nicolas Estigarribia on 07/11/2023.
 //
 
 import SwiftUI

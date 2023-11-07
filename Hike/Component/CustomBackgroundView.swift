@@ -2,7 +2,7 @@
 //  CustomBackgroundView.swift
 //  Hike
 //
-//  Created by digital express on 28/10/2023.
+//  Created by Nicolas Estigarribia on 28/10/2023.
 //
 
 import SwiftUI
