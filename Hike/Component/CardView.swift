@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CardView: View {
     
-    //Variables
+    // MARK: - VARIABLES
     @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
     
-    //Funciones
+    // MARK: - FUNCIONES
     func randomImage() {
         repeat {
             randomNumber = Int.random(in: 1...5)
@@ -27,7 +27,7 @@ struct CardView: View {
             CustomBackgroundView()
             
             VStack {
-                //Header
+                // MARK: - HEADER
                 
                 VStack (alignment: .leading) {
                     //Title
@@ -69,17 +69,14 @@ struct CardView: View {
                 }// End Header
                 .padding(.horizontal, 30)
                 
-                //Main content
-                
-                
-                
+                // MARK: - BODY
                 
                 ZStack {
                     Circle().fill(
                         LinearGradient(colors:
                                         [
-                                            Color(UIColor.colorIndigoMedium),
-                                            Color(UIColor.colorSalmonLight)
+                                            .colorIndigoMedium,
+                                            .colorSalmonLight
                                         ],
                                        startPoint: .topLeading,
                                        endPoint: .bottomTrailing)
@@ -91,7 +88,7 @@ struct CardView: View {
                         .animation(.easeOut(duration: 3), value: imageNumber)
                 }
                 
-                // Footer
+                // MARK: - FOOTER
                 
                 
                 Button {
