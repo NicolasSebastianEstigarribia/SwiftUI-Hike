@@ -74,36 +74,58 @@ struct SettingsView: View {
                 }
             ) {
                 // 1. Basic labeled content
-                LabeledContent("Aplication", value: "Hike")
+                //LabeledContent("Aplication", value: "Hike")
                 
                 // 2. Advanced labeled content
                 
-                LabeledContent {
-                    Text("Hike")
-                        .foregroundStyle(.primary)
-                        .fontWeight(.heavy)
-                } label: {
-                    
-                    HStack {
-                        ZStack{
-                            RoundedRectangle (cornerRadius: 8)
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.blue)
-                            Image(systemName: "apps.iphone")
-                                .foregroundStyle(.white)
-                                .fontWeight(.semibold)
-                            
-                        }
-                        
-                        Text("Aplication")
-                    }
-                    
-                    
-                }
+                CustomListRowView(
+                    rowLabel: "Application",
+                    rowIcon: "apps.iphone",
+                    rowContent: "HIKE",
+                    rowTintColor: .blue
+                )
+                CustomListRowView(
+                    rowLabel: "Compatibility",
+                    rowIcon: "info.circle",
+                    rowContent: "iOS, IpadOS",
+                    rowTintColor: .red
+                )
+                CustomListRowView(
+                    rowLabel: "Technology",
+                    rowIcon: "swift",
+                    rowContent: "Swift",
+                    rowTintColor: .orange
+                )
+                CustomListRowView(
+                    rowLabel: "Version",
+                    rowIcon: "gear",
+                    rowContent: "1.0",
+                    rowTintColor: .purple
+                )
+                CustomListRowView(
+                    rowLabel: "Developer",
+                    rowIcon: "ellipsis.curlybraces",
+                    rowContent: "Nicolas Estigarribia",
+                    rowTintColor: .mint
+                )
+                CustomListRowView(
+                    rowLabel: "Designer",
+                    rowIcon: "paintpalette",
+                    rowContent: "Robert Petras",
+                    rowTintColor: .pink
+                )
+                CustomListRowView(
+                    rowLabel: "Website",
+                    rowIcon: "globe",
+                    rowContent: nil,
+                    rowTintColor: .indigo,
+                    rowLinkLabel: "https://nicolas.estig",
+                    rowLinkDestination : "https://www.apple.com"
+                )
                 
                 
             }
-            .padding(.vertical, 8)
+            .padding(.vertical, 2)
             
         }
     }
