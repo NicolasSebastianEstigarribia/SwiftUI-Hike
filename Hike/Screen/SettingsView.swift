@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    // MARK: - Properties
+    
+    private let alternateAppIcons: [String] = [
+        "AppIcon-MagnifyingGlass",
+        "AppIcon-Map",
+        "AppIcon-Mushroom",
+        "AppIcon-Camera",
+        "AppIcon-Backpack",
+        "AppIcon-Campfire",
+    ]
+    
     var body: some View {
         List {
             // MARK: - Header
@@ -61,6 +72,44 @@ struct SettingsView: View {
             
             
             // MARK: - Icons
+            
+            Section (header: Text("Alternate Icons")) {
+      
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack (spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) {
+                            item in Button {
+                                print("Icon \(alternateAppIcons[item]) was pressed.")
+                                
+                                UIApplication.shared.setAlternateIconName(alternateAppIcons[item]) {
+                                    error in if error != nil {
+                                        print("Failed \(String(describing: error?.localizedDescription))")
+                                    } else {
+                                        print("Success!")
+                                    }
+                                }
+                                
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                            }
+                        }
+                    }
+                }
+                    
+             
+                Text("Choose yout favourite app icon from the collection above.")
+                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.secondary)
+                    .font(.footnote)
+                
+            }
+            .listRowSeparator(.hidden)
+          
             
             
             // MARK: - About
